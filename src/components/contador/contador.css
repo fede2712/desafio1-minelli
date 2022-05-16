@@ -1,0 +1,28 @@
+.contador-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+    width: 100%;
+    color: white;
+}
+
+.contador {
+    font-size: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: none;
+    color: rgb(21, 119, 175);
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.contador:hover {
+    animation: borderglow infinite 3s ease-in-out;
+
+}

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './ItemListContainer.css';
+import Contador from '../contador/contador.jsx'
 
 
 
-function Card({id, clase, img, producto, descripcion, precio}) {
+function Card({id, clase, img, producto, descripcion, precio, contador}) {
 
   const [switchToggle2, setswitchToggle2] = useState(false)
   const ToggleSwitch2 = () => {
@@ -17,7 +18,8 @@ function Card({id, clase, img, producto, descripcion, precio}) {
         <img src={img} className="cardimg" alt={producto} />
         <p className="cardTitulo">{producto}</p>
         <p className="cardDescripcion">{descripcion}</p>
-        {/* <p className="cardPrecio">{precio}</p>  */}
+        <p className="cardPrecio">{precio}</p>
+        <Contador />
   </div>
     ); }
 
