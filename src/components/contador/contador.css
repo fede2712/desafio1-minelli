@@ -10,11 +10,12 @@
 
 .contador {
     font-size: 1.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    background: none;
-    color: rgb(21, 119, 175);
-    border: 2px solid darkblue;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    border: none;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -26,3 +27,103 @@
     animation: borderglow infinite 3s ease-in-out;
 
 }
+
+.carritoadd {
+    width: 1.5rem;
+    background: none;
+}
+
+.addCartButton {
+    width: 3rem;
+    height: 3rem;
+    
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: none;
+    color: rgb(192, 104, 104);
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s all ease-in-out;
+    
+    bottom: 0.7rem;
+    }
+    
+    .addCartButton:hover {
+    color: white;
+    background-color: rgb(192, 104, 104);
+    font-weight: bold;
+    bottom: 1rem;
+    }
+
+    .AddRemoveButton {
+        font-size: 1rem;
+        height: 2rem;
+        width: 6rem;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s all ease-in-out;
+    }
+    
+    .AddRemoveButton:hover {
+        color: rgb(192, 104, 104);
+        font-weight: bolder;
+    }
+    
+    .addCartButtonCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        width: 100%;
+        color: white;
+    }
+    
+    .toprightradius {
+        border-radius: 0px 5px 0px 0px;
+    }
+    
+    .topleftradius {
+        border-radius: 5px 0px  0px 0px;
+    }
+    
+    .addCartButton {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: rgb(192, 104, 104);
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s all ease-in-out;
+    position: relative;
+    bottom: 0.7rem;
+    }
+    
+    .addCartButton:hover {
+    color: white;
+    background-color: rgb(192, 104, 104);
+    font-weight: bold;
+    bottom: 1rem;
+    }
+    
+    .ultimosDisp {
+        font-size: 0.8rem;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    
+    .carritoadd {
+        width: 1.5rem;
+    }
+    
+   

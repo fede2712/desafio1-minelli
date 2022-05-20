@@ -1,35 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import './contador.css';
+import botoncompra from './img/botoncompra.png';
 
 
-
-export default function Contador() {
+export default function Contador({stock, initial, onAdd}) {
 
     const [count, setCount] = useState(0)
 
-    function suma() {
-        setCount( count + 1)
-    } 
+    function Add() {
+      setCount( count + 1)
 
-    function resta() {
-        setCount( count - 1)
+      if (count == stock) {
+        setCount( count )
+      }
+  } 
 
-         if (count == 0) {
-            setCount( count )
-        }
-    }
+  function Remove() {
+      setCount( count - 1)
 
+       if (count == 0) {
+          setCount( count )
+      }
+  }
+
+  function onAddbutton () {
+    alert("Agregaste " + count + " al carrito")
+  }
 
  
 // useEffect ( () =>    {
 
 // }, []) 
 
-  return (
-    <div>
-    <div className="contador">{count}</div>
-    <button onClick={suma}>+</button>
-    <button onClick={resta}>-</button>
+return (
+  <>
+    <div  className='contador-cont'>
+      <button className='AddRemoveButton topleftradius' onClick={Remove}>-</button>
+      <div className='contador'>{count}</div>
+      <button className='AddRemoveButton toprightradius' onClick={Add}>+</button>
     </div>
-  )
+    <div className='addCartButtonCont'>
+      <button className='addCartButton' onClick={onAddbutton}> <img className='botoncompra' src={botoncompra} alt="" /> </button>
+      <p className='ultimosDisp'>¡Últimos {stock} disponibles!</p>
+    </div>
+  </>
+)
 }

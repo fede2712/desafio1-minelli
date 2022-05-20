@@ -149,3 +149,8 @@ transform: translateY(5px);}
 .backmeta {
     background-color: rgb(235, 178, 93);
 }
+
+.carritoadd {
+    width: 1.5rem;
+    background: none;
+}
