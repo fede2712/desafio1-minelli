@@ -40,7 +40,7 @@ return (
       <button className='AddRemoveButton toprightradius' onClick={Add}>+</button>
     </div>
     <div className='addCartButtonCont'>
-      <button className='addCartButton' onClick={onAddbutton}> <img className='botoncompra' src={botoncompra} alt="" /> </button>
+      <button className='addCartButton' onClick={onAddbutton}> <img className='carritoadd' src={botoncompra} alt="" /> </button>
       <p className='ultimosDisp'>¡Últimos {stock} disponibles!</p>
     </div>
   </>

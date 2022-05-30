@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
 import Card from './Cards'
 import Titulo from '../texts/Titulo'
-import Contador from '../contador/contador.jsx'
+import ItemList from './ItemList';
+
+import { Link } from "react-router-dom"
+import { getFetch } from '../../data';
+import { useParams } from 'react-router-dom';
 
 import argentina from './img/argentina.png';
 import brasil from './img/brasil.png';
@@ -16,52 +20,86 @@ import espana from './img/espana.png';
 import belgica from './img/belgica.png';
 import noruega from './img/noruega.png';
 
+//RANDOM BUTTON//
+let randomID = Math.floor(Math.random() * 15);
 
-
+console.log(randomID)
 
 function ItemListContainer() {
 
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [productos, setProductos]=useState([]);
+
+  const { id } = useParams()
+
+  //FETCH// 
+
+  useEffect(() => {
+
+    if (id) {
+      getFetch()
+      .then(respuesta =>   setProductos(respuesta.filter((prods)=> prods.categoria === id)))
+      .catch((err)=>console.log(err))
+      .finally(() => setLoading(false))
+    } else {
+      getFetch()
+      .then(respuesta=> setProductos(respuesta))
+      .catch((err)=>console.log(err))
+      .finally(() => setLoading(false))
+    }
+
+ 
   
-    return (
-  < >
-  <Titulo  texto="ALGUNOS DE NUESTROS PRODUCTOS:" />
-     
-  <div className='itemsCont'>
+  },  [id]);
 
-   
-    <Card  id="carduno" className="cardcont" img={argentina} producto="ARGENTINA'95 " descripcion="-" precio="$1200"  />
-    
-    <Card id="carddos"  className="cardcont" img={brasil} producto="BRASIL '91-93" descripcion="-" precio="$1200"/>
+  //PROMISE// 
+  const cards = new Promise((resolve, reject) => {
+    setTimeout(() => {resolve([]);}, 2000);
+  });
 
-    <Card id="cardtres" className="cardcont" img={chile}  producto="CHILE '14-15" descripcion="-" precio="$1200" />
-
-    <Card id="cardcuatro" className="cardcont" img={paraguay} producto="PARAGUAY '15" descripcion="-" precio="$1200" />
-
-    <Card id="cardcinco" className="cardcont"  img={uruguay} producto="URUGUAY '21" descripcion="-" precio="$1200" />
-
-    <Card  id="carduno" className="cardcont"  img={noruega} producto="NORUEGA '18 " descripcion="-" precio="$1200"  />
-
-    <Card id="carddos"  className="cardcont" img={brasil} producto="BRASIL '91-93" descripcion="-" precio="$1200" />
-
-    <Card id="cardtres" className="cardcont"  img={espana}  producto="ESPAÑA '15" descripcion="-" precio="$1200" />
-
-    <Card id="cardcuatro" className="cardcont"  img={belgica} producto="BÉLGICA '17" descripcion="-" precio="$1200" />
-
-    <Card id="cardcinco" className="cardcont"  img={venezuela} producto="VENEZUELA '17" descripcion="-." precio="$1200" />
-
-    <Card id="cardcinco" className="cardcont"  img={peru} producto="PERÚ '06" descripcion="-." precio="$1200" />
-
-    <Card id="cardcinco" className="cardcont"  img={colombia} producto="COLOMBIA '05" descripcion="-" precio="$1200" />
+   cards.then((cargarItems) => {
+    setItems(cargarItems);
+    setLoading(false);
+  });
 
 
 
-  </div>
+
+  return (
+    < >
   
-  </>  
-
-
-
+  
+    <Titulo  texto="Elegí el diseño" />
+  
+    <div className='filtercont' >
+    <p className='filterelementfilt'>FILTRO</p>
+  
+    <Link className='link filterelement' to={`/categoria/hodl`}>
+    HODL DESIGN
+    </Link>
+  
+    <Link className='link filterelement' to={`/categoria/nft`}>
+    NFT COLLECTIONS
+    </Link>
+  
+    <Link className='link filterelement'  to={`/detalle/${randomID}`}>
+    PICK RANDOM
+    </Link>
+  
+    <Link className='link filterelement' to={`/`}>
+    VER TODO
+    </Link>
+  
+    </div>
+  
+  
+  
+    <ItemList items={productos} loading={loading}   />
+  
+    </>  
     ); }
-
-    
-export default ItemListContainer;
+  
+  
+   
+  export default ItemListContainer;

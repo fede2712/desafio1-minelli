@@ -33,30 +33,7 @@
     background: none;
 }
 
-.addCartButton {
-    width: 3rem;
-    height: 3rem;
-    
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: none;
-    color: rgb(192, 104, 104);
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.5s all ease-in-out;
-    
-    bottom: 0.7rem;
-    }
-    
-    .addCartButton:hover {
-    color: white;
-    background-color: rgb(192, 104, 104);
-    font-weight: bold;
-    bottom: 1rem;
-    }
+
 
     .AddRemoveButton {
         font-size: 1rem;
@@ -105,13 +82,12 @@
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     transition: 0.5s all ease-in-out;
-    position: relative;
     bottom: 0.7rem;
+    filter: invert(1);
     }
     
     .addCartButton:hover {
-    color: white;
-    background-color: rgb(192, 104, 104);
+    filter: drop-shadow(0 0 0.25rem rgb(255, 255, 255));
     font-weight: bold;
     bottom: 1rem;
     }
