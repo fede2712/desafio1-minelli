@@ -28,7 +28,7 @@ import CartContextProvider from './context/CartContext';
               <Route path='/' element = { <ItemListContainer/> } />
               <Route path='/detalle/:detalleID' element = { <ItemDetailContainer/> } />
               <Route path='/contacto' element = { <Contacto/> } />
-              <Route path='/nosotrxs' element = { <Nosotros/> } />
+              <Route path='/nosotros' element = { <Nosotros/> } />
               <Route path='/cart' element = { <Cart/> } />
               <Route path='/categoria/:id' element = { <ItemListContainer/> } />
               <Route path='/*' element ={ <Navigate to ='/' replace /> }></Route>

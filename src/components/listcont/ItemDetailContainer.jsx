@@ -25,7 +25,7 @@ function ItemListContainer({}) {
   < >
 
 
-  <ItemDetail  img={productos.img} nombre={productos.nombre} descripcion={productos.descripcion}  loading={loading}/>
+  <ItemDetail  img={productos.img} nombre={productos.nombre} descripcion={productos.descripcion} precio={productos.precio} loading={loading}/>
   
   </>  
   ); }

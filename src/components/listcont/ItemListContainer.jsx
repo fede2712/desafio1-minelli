@@ -66,40 +66,60 @@ function ItemListContainer() {
 
 
 
-  return (
-    < >
-  
-  
-    <Titulo  texto="Elegí el diseño" />
-  
-    <div className='filtercont' >
-    <p className='filterelementfilt'>FILTRO</p>
-  
-    <Link className='link filterelement' to={`/categoria/hodl`}>
-    HODL DESIGN
-    </Link>
-  
-    <Link className='link filterelement' to={`/categoria/nft`}>
-    NFT COLLECTIONS
-    </Link>
-  
-    <Link className='link filterelement'  to={`/detalle/${randomID}`}>
-    PICK RANDOM
-    </Link>
-  
-    <Link className='link filterelement' to={`/`}>
-    VER TODO
-    </Link>
-  
-    </div>
-  
-  
-  
-    <ItemList items={productos} loading={loading}   />
-  
-    </>  
-    ); }
-  
-  
-   
-  export default ItemListContainer;
+     return (
+  < >
+
+
+  <Titulo  texto="TUCÁN - RETRO STORE" />
+
+  <div className='filtercont' >
+  <p className='filterelementfilt'>FILTRO</p>
+
+  <Link className='link filterelement' to={`/categoria/africa`}>
+  ÁFRICA
+  </Link>
+
+  <Link className='link filterelement' to={`/categoria/asia`}>
+  ASIA
+  </Link>
+
+  <Link className='link filterelement' to={`/categoria/centroamerica`}>
+  CENTROAMÉRICA
+  </Link>
+
+  <Link className='link filterelement' to={`/categoria/europa`}>
+  EUROPA
+  </Link>
+
+  <Link className='link filterelement' to={`/categoria/norteamerica`}>
+  NORTEAMÉRICA
+  </Link>
+
+  <Link className='link filterelement' to={`/categoria/sudamerica`}>
+  SUDAMÉRICA
+  </Link>
+
+  <Link className='link filterelement' to={`/categoria/oceania`}>
+  OCEANÍA
+  </Link>
+
+  <Link className='link filterelement'  to={`/detalle/${randomID}`}>
+  PICK RANDOM
+  </Link>
+
+  <Link className='link filterelement' to={`/`}>
+  VER TODO
+  </Link>
+
+  </div>
+
+
+
+  <ItemList items={productos} loading={loading}   />
+
+  </>  
+  ); }
+
+
+ 
+export default ItemListContainer;

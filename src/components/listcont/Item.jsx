@@ -24,6 +24,7 @@ function Item({id, nombre, img, descripcion}) {
         <img src={img}  className="cardimg" alt={nombre} />
         <p className="cardTitulo">{nombre}</p>
         <p className="cardDescripcion">{descripcion}</p>
+        
   </div>
   </Link>
     ); }
