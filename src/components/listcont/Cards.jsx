@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ItemListContainer.css';
-import Contador from '../contador/contador.jsx'
+import Contador from '../contador';
+import '/contador.css';
 
 
 

@@ -1,149 +1,305 @@
 .cartcont {
     margin: 1rem auto;
-    width: 80%;
+    width: 50%;
     display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content: space-evenly;
     justify-items: center;
-    align-items:baseline;
+    align-items: baseline;
     padding: 2rem;
     border-radius: 25px;
     background-color: rgb(7, 55, 189);
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
 .micarritocont {
-width: 70%;
-display: flex;
-flex-direction: column;
-background-color: #497de6;
-border-radius: 10px;
-padding: 0rem 2rem 2rem 2rem;
-margin: 0.5rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #497de6;
+    border-radius: 10px;
+    padding: 0rem 2rem 2rem 2rem;
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.75);
+    margin: 0.5rem;
 }
 
 .resumendelpedidocont {
-width: 30%;
-display: flex;
-flex-direction: column;
-background-color: #497de6;
-border-radius: 10px;
-padding: 0rem 2rem 2rem 2rem;
-margin: 0.5rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #497de6;
+    border-radius: 10px;
+    padding: 0rem 2rem 2rem 2rem;
+    box-shadow: 15px 15px 6px 0px rgba(0, 0, 0, 0.75);
+    margin: 0.5rem;
 
 }
 
 .micarritotitulo {
-font-family: 'Roboto Slab', serif;
-font-weight: lighter;
-font-size: 1.2rem;
-letter-spacing: 0.1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
 }
 
 .micarritoitemscont {
-display: flex;
-justify-content:space-evenly;
-justify-items: center;
-margin: 0.5rem 0rem;
-}
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin: 0.5rem 0rem;
+   }
 
-.carritoprod, .carritotipo, .carritocant, .carritoprecio {
-font-size: 0.8rem;
+.carritoprod,
+.carritotipo,
+.carritocant,
+.carritoprecio {
+    font-size: 0.8rem;
+    color: white;
 }
 
 .carritoprod {
-width: 100%;
-font-size: 1.2rem;
-font-weight: bolder;
-margin: 0.2rem 0 1rem 0;
-letter-spacing: 0.2rem;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    margin: 0.2rem 0 1rem 0;
+    letter-spacing: 0.2rem;
 }
 
-.carritoprecio {
-font-size: 2rem;
-margin-top: 1rem;
-font-weight: bolder;
 
+.carritocantcont {
+    display: flex;
+    flex-direction: row;
+    border: 1px white solid;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 0.5rem 0rem;
+    margin-top: 2rem;
+    border-radius: 10px 0 0 0;
+    transition: 0.2s all ease-in-out;
 }
+
+
 
 .carritotipo {
-width: 100%;
-letter-spacing: 0.3rem;
-font-weight: lighter;
-margin: 0;
+    width: 100%;
+    letter-spacing: 0.3rem;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.carritoprecio2 {
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 .carritocant {
-font-size: 0.8rem;
-margin: 0;
+    font-size: 0.8rem;
+    margin: 0;
+
 }
 
 .carritocanteliminar {
-width: 1rem;
-margin: 0;
-filter: invert(1);
+    width: 1rem;
+    margin: 0rem;
+    filter: invert(1);
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.carritocanteliminar:hover {
+    filter: invert(0.6);
+
 }
 
 
 .prodtipocont {
-width: 100%;
-display: flex;
-flex-direction: column;
-text-align: left;
-padding-left: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 2rem;
 }
 
 .cantpreciocont {
-width: 20%;
-display: flex;
-flex-direction: column;
-text-align: left;
-padding-left: 2rem;
-
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .carritocantcont {
-width: 100%;
-height: fit-content;
-display: flex;
-flex-direction: row;
-border: 1px white solid;
-justify-content:space-evenly;
-justify-items: center;
-padding: 0.5rem 0.1rem;
-margin-top: 2rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    border: 1px white solid;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 0.5rem 0.1rem;
+    border-radius: 10px 10px 0 0;
+    margin-top: 2rem;
 }
 
 .fotocart {
-display: flex;
-width: 10rem;
-height: 10rem;
-border-radius: 5px;
-object-fit:cover;
-aspect-ratio: 1/1;
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
 
 
 }
 
 .vaciarcarrito {
-color: white;
-font-size: 0.8rem;
-background-color: rgb(192, 104, 104);
-padding: 0.5rem 1rem;
-margin: 1rem auto;
-width: fit-content;
-border-radius: 10px;
-cursor: pointer;
-transition: all 0.5s ease-in-out;
-opacity: 50%;
-filter: blur(0.8px);
+    color: white;
+    font-size: 0.8rem;
+    background-color: rgb(106, 136, 145);
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    width: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    opacity: 75%;
+    filter: blur(0.2px);
+    border: none;
+    text-decoration: none;
 }
 
 .vaciarcarrito:hover {
-opacity: 100%;
-letter-spacing: 0.13rem;
-filter: blur(0px);
-background-color: rgb(192, 104, 104);
+    opacity: 100%;
+    background-color: rgb(106, 136, 145);
+    filter: blur(0);
+
+}
+
+.cartImg {
+    aspect-ratio: 1/1;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 1rem;
+    border-radius: 5px;
+    position: relative;
+    right: 2rem;
+}
+
+
+.micarritoDetalleCont {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 20%;
+    position: relative;
+    right: 5rem;
+}
+
+
+.carritoprecio {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: black;
+    margin: 0 auto;
+
+}
+.tachito {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+.precioTachoCont {
+    display: flex;
+    flex-direction: row ;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5px 5px 5px 5px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.precioFinal {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    border: 1px solid rgb(7, 55, 189);
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.precioFinalNum {
+    background-color: white;
+    
+    color: #497de6;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.precioFinalNum2 {
+    background-color: white;
+    padding: 0.5rem;
+    color: rgb(7, 55, 189);
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.0rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 3rem auto 0rem;
+}
+
+.displayNone {
+    display: none;
+}
+
+
+/* INPUT */
+
+.inputCont {
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(7, 55, 189);
+    color: white;
+    margin: 0.5rem auto;
+    padding: 0rem 0.3rem 0rem 0.5rem;
+    border-radius: 0 5px 5px 5px;
+    border: rgb(255, 255, 255, 20%) 1px solid;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width:  70%;
+    height: 2rem;
+    align-items: center;
+}
+
+.label {
+    margin-right: 2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    width: 15%;
+    text-align: left;
+}
+
+
+.input2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding-left: 0.5rem;
+    margin: 2rem;
+    width: 60%;
+    justify-items: space-between;
+}
+
+.input2::placeholder {
+    color: white;
+}
+
+.nroOrden {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 2rem;
+
+    width: fit-content;
+    margin: 5rem auto;
+    border-radius: 10px;
+    background-color: rgb(7, 55, 189);
 }

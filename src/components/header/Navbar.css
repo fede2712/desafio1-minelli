@@ -70,5 +70,7 @@ nav {
     font-weight: 400;
 }
 
-
-
+.link {
+    text-decoration: none;
+    padding: 0.5rem 0rem;
+}

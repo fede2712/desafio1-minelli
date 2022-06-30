@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './contador.css';
+import './Contador.css';
 import botoncompra from './img/botoncompra.png';
 
 

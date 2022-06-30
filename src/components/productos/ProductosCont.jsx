@@ -6,10 +6,7 @@ import AfterCount from '../listcont/AfterCount';
 import { useCartContext } from '../../context/CartContext'
   
 
-const data = [    {"id":"1", "tipo": "BUZO", "stock":"1", "precio":"6500", "img":"https://drive.google.com/uc?id=1_92ZJra32ZIsYuxbBf1CpcXjgn3jmUeg"},
-{"id":"2", "tipo": "REMERA", "stock":"2", "precio":"3500", "img":"https://drive.google.com/uc?id=1DiNWCOli3N1mDw9EAAnPVrApjHTo5fI5"},
-{"id":"3", "tipo": "SHORTS", "stock":"3", "precio":"2500", "img":"https://drive.google.com/uc?id=1_lO_qnqwEQQ3Yf2npJJqMwihWHLcp572"}
-]
+
 
 
 function ProductosCont({producto, imgpro}) {

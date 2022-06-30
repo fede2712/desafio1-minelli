@@ -11,9 +11,9 @@ export default function ItemCount({ itemcount }) {
     <>
       <div  className='contador-cont'>
         <Link className='filterelement' to={"/cart"}>
-        Finalizar compra</Link>
+        FINALIZAR COMPRA</Link>
         
-        <p className='filterelement' onClick={itemcount}>Seguir comprando</p>
+        <p className='filterelement' onClick={itemcount}>CONTINUAR COMPRANDO</p>
 
         <Link className='filterelementimg'  to={"/"}>
         <img className='backhomeimg' src="https://img.icons8.com/ios/50/000000/home--v1.png"/></Link>

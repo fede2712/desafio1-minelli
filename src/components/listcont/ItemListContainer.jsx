@@ -1,66 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
-import Card from './Cards'
 import Titulo from '../texts/Titulo'
 import ItemList from './ItemList';
-
 import { Link } from "react-router-dom"
-import { getFetch } from '../../data';
 import { useParams } from 'react-router-dom';
+import { getFirestore, where, collection, getDocs, query } from "firebase/firestore"
 
-import argentina from './img/argentina.png';
-import brasil from './img/brasil.png';
-import uruguay from './img/uruguay.png';
-import paraguay from './img/paraguay.png';
-import chile from './img/chile.png';
-import peru from './img/peru.png';
-import venezuela from './img/venezuela.png';
-import colombia from './img/colombia.png';
-import espana from './img/espana.png';
-import belgica from './img/belgica.png';
-import noruega from './img/noruega.png';
+// // RANDOM BUTTON
 
-//RANDOM BUTTON//
-let randomID = Math.floor(Math.random() * 15);
+// let randomID = Math.floor(Math.random() * 15);
 
-console.log(randomID)
+// console.log(randomID)
 
 function ItemListContainer() {
 
+
   const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [productos, setProductos]=useState([]);
+  const [cargando, setCargando] = useState(true);
+  const [productos, setProductos] = useState([]);
 
   const { id } = useParams()
 
-  //FETCH// 
 
+  // LA FUNCIÓN TOMA LOS PRODUCTOS DE FIREBASE Y LOS GUARDA EN LA VARIABLE PRODUCTOS
   useEffect(() => {
 
-    if (id) {
-      getFetch()
-      .then(respuesta =>   setProductos(respuesta.filter((prods)=> prods.categoria === id)))
-      .catch((err)=>console.log(err))
-      .finally(() => setLoading(false))
-    } else {
-      getFetch()
-      .then(respuesta=> setProductos(respuesta))
-      .catch((err)=>console.log(err))
-      .finally(() => setLoading(false))
-    }
+    const db = getFirestore()
+    const QueryCollection = collection(db, "productos")
+    const QueryCollectionFilter = id ? query(QueryCollection, where("categoria", "==", id)) : QueryCollection
 
- 
-  
-  },  [id]);
+    getDocs(QueryCollectionFilter)
+      .then(resp => setProductos(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
+      .catch((err) => console.log(err))
+      .finally(() => setCargando(false))
 
-  //PROMISE// 
+  }, [id])
+
+  ////SIMULACIÓN DE CARGA LAS CARDS - LOADER ///
+
   const cards = new Promise((resolve, reject) => {
-    setTimeout(() => {resolve([]);}, 2000);
+    setTimeout(() => { resolve([]); }, 2000);
   });
 
-   cards.then((cargarItems) => {
+  cards.then((cargarItems) => {
     setItems(cargarItems);
-    setLoading(false);
+    setCargando(false);
+
   });
 
 
@@ -102,20 +87,16 @@ function ItemListContainer() {
   <Link className='link filterelement' to={`/categoria/oceania`}>
   OCEANÍA
   </Link>
-
-  <Link className='link filterelement'  to={`/detalle/${randomID}`}>
-  PICK RANDOM
-  </Link>
-
+  
   <Link className='link filterelement' to={`/`}>
-  VER TODO
+  TODAS
   </Link>
 
   </div>
 
 
 
-  <ItemList items={productos} loading={loading}   />
+  <ItemList items={productos} loading={cargando}   />
 
   </>  
   ); }
