@@ -32,4 +32,4 @@ FireBase.
 
 ▪ Deploy:
 
-El deploy del sitio fue realizado en Netlify, se encuentra en este link => https://tiendahodl.netlify.app/
+El deploy del sitio fue realizado en Netlify, se encuentra en este link => https://tiendatucan.netlify.app/
