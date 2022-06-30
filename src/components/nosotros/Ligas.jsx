@@ -7,7 +7,7 @@ import serieA from './img/serieA.png';
 
 
 
-function Nosotros() {
+function Ligas() {
   
     return (
         < >
@@ -24,4 +24,4 @@ function Nosotros() {
   </>  
     ); }
 
-export default Nosotros;
+export default Ligas;

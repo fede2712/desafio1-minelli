@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './ItemListContainer.css';
-import Contador from '../contador';
-import '/contador.css';
+import Contador from '../contador/Contador';
+import '../contador/Contador.css';
 
 
 
-function Card({id, clase, img, producto, descripcion, precio, contador}) {
+function Card({id, clase, img, producto, descripcion, precio, cont}) {
 
   const [switchToggle2, setswitchToggle2] = useState(false)
   const ToggleSwitch2 = () => {
@@ -20,7 +20,8 @@ function Card({id, clase, img, producto, descripcion, precio, contador}) {
         <p className="cardTitulo">{producto}</p>
         <p className="cardDescripcion">{descripcion}</p>
         <p className="cardPrecio">{precio}</p>
-        <Contador />
+        {cont === "no" ? <span></span> :  <Contador /> }
+       
   </div>
     ); }
 

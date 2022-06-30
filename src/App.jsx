@@ -7,10 +7,11 @@ import './App.css';
  import Navbar from './components/header/Navbar';
  import ItemListContainer from './components/listcont/ItemListContainer';
  import ItemDetailContainer from './components/listcont/ItemDetailContainer';
- import Ligas from './components/nosotros/Ligas';
  import Cart from './components/cart/Cart';
 import CartContextProvider from './context/CartContext';
 import Pagar from './components/cart/Pagar';
+import Colaboradores from './colaboradores/Colaboradores';
+import Ligas from './components/nosotros/Ligas';
 
 
  function App() {
@@ -26,7 +27,8 @@ import Pagar from './components/cart/Pagar';
             <Routes>
               <Route path='/' element = { <ItemListContainer/> } />
               <Route path='/detalle/:detalleID' element = { <ItemDetailContainer/> } />
-              <Route path='/nosotros' element = { <Ligas/> } />
+              <Route path='/colaboradores' element = { <Colaboradores/> } />
+              <Route path='/ligas' element = { <Ligas/> } />
               <Route path='/cart' element = { <Cart/> } />
               <Route path='/categoria/:id' element = { <ItemListContainer/> } />
               <Route path='/*' element ={ <Navigate to ='/' replace /> } />
